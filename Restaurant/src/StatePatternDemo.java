@@ -1,8 +1,6 @@
-import java.util.*;
-
-public class Test {
+public class StatePatternDemo {
     Statue statue;
-    Test(String state)
+    StatePatternDemo(String state)
     {
         statue = new Statue();
         if(state.equalsIgnoreCase("waiting"))
@@ -25,9 +23,9 @@ public class Test {
 //        System.out.print("Enter customer statues: ");
 //        String states = sc.next();
         System.out.println("When customer is waiting:");
-        new Test("waiting");
+        new StatePatternDemo("waiting");
         System.out.println();
         System.out.println("When customer is waiting:");
-        new Test("place");
+        new StatePatternDemo("place");
     }
 }
