@@ -19,12 +19,11 @@ public class Test {
         statue.order_receive();
     }
 
-
     public static void main(String[] args)
     {
         Scanner sc= new Scanner(System.in);
         System.out.print("Enter customer statues: ");
         String states = sc.next();
-        Test test = new Test(states);
+        Test test = new Test(states); 
     }
 }
