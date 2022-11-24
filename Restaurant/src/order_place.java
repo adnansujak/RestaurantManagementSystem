@@ -1,27 +1,26 @@
-public class order_place extends OrderState{
-    public order_place()
-    {
-        state = "placed";
-    }
-
+public class order_place implements Customer_Status{
     public void order_wait(){
-        display = "wait for place order";
-        total += 0.0;
+        System.out.println("no wait for order");
+//        display = "wait for place order";
+//        total += 0.0;
     }
 
     public void order_place() {
-        display = "order has been placed";
-        total += 0.0;
+        System.out.println("order has been placed");
+//        display = "order has been placed";
+//        total += 0.0;
     }
 
     public void order_paid(){
-        display = "order have not paid";
-        total += 0.0;
+        System.out.println("order have not paid");
+//        display = "order have not paid";
+//        total += 0.0;
     }
 
     public void order_receive()
     {
-        display = "order have not receive";
-        total += 0.0;
+        System.out.println("order have not receive");
+//        display = "order have not receive";
+//        total += 0.0;
     }
 }

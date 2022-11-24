@@ -1,27 +1,27 @@
-public class order_receive extends OrderState{
-    public order_receive()
-    {
-        state = "receive";
-    }
+public class order_receive implements Customer_Status{
 
     public void order_wait(){
-        display = "wait for place order";
-        total += 0.0;
+        System.out.println("no wait for order");
+//        display = "wait for place order";
+//        total += 0.0;
     }
 
     public void order_place() {
-        display = "order have placed";
-        total += 0.0;
+        System.out.println("no order have placed");
+//        display = "order have placed";
+//        total += 0.0;
     }
 
     public void order_paid(){
-        display = "order have paid";
-        total += 100.0;
+        System.out.println("no order have paid");
+//        display = "order have paid";
+//        total += 100.0;
     }
 
     public void order_receive()
     {
-        display = "order have received";
-        total += 100.0;
+        System.out.println("order have received");
+//        display = "order have received";
+//        total += 100.0;
     }
 }
