@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-public class CustomerBillPay {
+public class CustomerPay {
     public static void main(String[] args) {
-        System.out.println("Please select Payment Type:" + "/r" + "Cash" + "/r" + "Debit Card"  + "/r" + "Credit Card" + "/r" + "Apple Pay" + "/r" + "PayPal");
+        System.out.println("Please select Payment Type: Cash || Debit Card || Credit Card || Apple Pay || PayPal");
         Scanner scanner = new Scanner (System.in);
         String paymentType = scanner.next();
         System.out.println("Payment type is:" + paymentType);
@@ -10,7 +10,7 @@ public class CustomerBillPay {
         System.out.println("\nPlease enter total amount to pay: ");
         Scanner scanner1 = new Scanner(System.in);
         String amount = scanner1.next();
-        System.out.println("Total amount is: " + amount);
+        System.out.println("Total amount is: $" + amount);
 
         PaymentContext ctx = null;
         ctx = new PaymentContext();

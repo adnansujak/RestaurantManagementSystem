@@ -1,5 +1,9 @@
 public class PayPalPayment implements PaymentMethod{
+    private String email;
+    private String password;
     public void bill(String amount) {
-        System.out.println("Customer pays the money" + amount + "dollars with PayPal");
+        email = "...";
+        password = "...";
+        System.out.println("Customer will pay $" + amount + "dollars with PayPal");
     }
 }
