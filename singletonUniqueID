@@ -1,0 +1,65 @@
+import org.junit.jupiter.api.Test;
+import java.util.Random;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class uniqueID {
+    int ID;
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int iD) {
+
+        ID = iD;
+    }
+
+    private uniqueID() {
+        this.ID= generateID();
+        System.out.println("Generated New ID " + ID);
+    }
+
+    private static volatile uniqueID singleObject; //private field refers to object
+
+    public static uniqueID getInstance() {
+
+        if(singleObject == null) { // checks if there is an ID assigned to an order or if an is placed.
+            singleObject = new uniqueID(); //if there isn't an ID, assign one
+        }
+        return singleObject;
+    }
+
+    public void getConnection() {
+
+        System.out.println("You are now connected to the restuarant website.");
+    }
+
+    public int generateID() {
+        Random randomNumber = new Random();
+        int upper = 1000000;
+        int random = randomNumber.nextInt(upper);
+        return random;
+    }
+
+
+    public static void main(String[] args) {
+        uniqueID UID = new uniqueID();
+    }
+
+    @Test
+    void getInstanceShouldNotBeNull() {
+        var test = new uniqueID();
+        test.getInstance();
+        assertNotNull(test);
+    }
+
+    @Test
+    void generateIDReturnShouldBeInt() {
+        var test = new uniqueID();
+        test.generateID();
+        assertTrue(Integer.class.isInstance(generateID()));
+
+    }
+
+}
